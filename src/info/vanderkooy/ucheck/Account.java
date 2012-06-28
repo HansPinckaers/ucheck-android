@@ -1,15 +1,13 @@
 package info.vanderkooy.ucheck;
 
 import android.app.Activity;
+import android.app.TabActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.*;
 
 public class Account extends Activity {
 	private Preferences prefs;
@@ -64,9 +62,12 @@ public class Account extends Activity {
 			Intent loginIntent = new Intent().setClass(Account.this,
 					Login.class);
 			Account.this.startActivity(loginIntent);
-		}
+//            TabActivity tabActivity;
+//            tabActivity = (TabActivity) getParent();
+//            tabActivity.getTabHost().setCurrentTab(0);
+        }
 	};
-	
+
 	private OnClickListener infoButtonListener = new OnClickListener() {
 		public void onClick(View v) {
 			prefs.setGoingToInfo(true);
